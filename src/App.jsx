@@ -3,11 +3,11 @@ import { Routes, Route, Link } from 'react-router-dom';
 
 // Импортируем компоненты страниц
 import MenuManagement from "./pages/MenuManagement";  // Управление меню и просмотр
-import TestPage2 from "./pages/TestPage2";           // Корзина
-import TestPage3 from "./pages/TestPage3";           // История заказов
-import LoginPage from "./pages/LoginPage";           // Вход
-import UserProfile from "./pages/UserProfile";       // Профиль
-import Users from "./pages/Users";                   // Управление учениками
+import Cart from "./pages/Cart";                      // Корзина
+import HistoryOrder from "./pages/HistoryOrder";      // История заказов
+import LoginPage from "./pages/LoginPage";            // Вход
+import UserProfile from "./pages/UserProfile";        // Профиль
+import Users from "./pages/Users";                    // Управление учениками
 
 function App() {
   return (
@@ -39,7 +39,7 @@ function App() {
         }}>
           🍽️ Меню
         </Link>
-        <Link to="/test-page2" style={{ 
+        <Link to="/cart" style={{ 
           color: 'white', 
           textDecoration: 'none',
           padding: '8px 12px',
@@ -48,7 +48,7 @@ function App() {
         }}>
           🛒 Корзина
         </Link>
-        <Link to="/test-page3" style={{ 
+        <Link to="/history-order" style={{ 
           color: 'white', 
           textDecoration: 'none',
           padding: '8px 12px',
@@ -82,8 +82,8 @@ function App() {
         <Route path="/" element={<MenuManagement />} />           {/* Главная страница - меню */}
         <Route path="/users" element={<Users />} />               {/* Управление учениками */}
         <Route path="/menu-management" element={<MenuManagement />} /> {/* Меню (дублирует главную) */}
-        <Route path="/test-page2" element={<TestPage2 />} />      {/* Корзина */}
-        <Route path="/test-page3" element={<TestPage3 />} />      {/* История заказов */}
+        <Route path="/cart" element={<Cart />} />                 {/* Корзина */}
+        <Route path="/history-order" element={<HistoryOrder />} /> {/* История заказов */}
         <Route path="/login-page" element={<LoginPage />} />      {/* Вход */}
         <Route path="/profile" element={<UserProfile />} />       {/* Профиль */}
       </Routes>
